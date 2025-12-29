@@ -7,7 +7,6 @@ requires-python = ">=3.13"
 dependencies = [
     "langchain-core>=1.2.5",
     "langchain-google-genai>=4.1.2",
-    "langchain-openai>=1.1.6",
     "langgraph>=1.0.5",
     "plotly>=6.5.0",
     "pydantic>=2.12.5",
