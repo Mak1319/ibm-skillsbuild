@@ -6,12 +6,13 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import JsonOutputParser
 from langgraph.graph import StateGraph, START, END
 from langgraph.checkpoint.memory import MemorySaver
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
+from streamlit import secrets 
 import os 
 
-load_dotenv()
+# load_dotenv()
 
-key = os.environ["GEMINI_KEY"]
+key = secrets["GEMINI_KEY"]
 
 class PreliminaryAgentState(BaseModel):
 	professions: List[str]= Field(description="The profession the candidate belongs to", default_factory=list)
